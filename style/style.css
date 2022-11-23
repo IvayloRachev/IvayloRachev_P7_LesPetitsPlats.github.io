@@ -30,6 +30,13 @@ header img {
   padding: 13px;
 }
 
+.select_container {
+  width: 100%;
+  display: flex;
+  margin-top: 10px;
+  gap: 20px;
+}
+
 * {
   font-family: "Lato", sans-serif;
 }/*# sourceMappingURL=style.css.map */
