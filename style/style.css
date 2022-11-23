@@ -9,6 +9,27 @@ header img {
   width: 268px;
 }
 
+.search_container {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+.search_container input {
+  background-color: #E7E7E7;
+  width: inherit;
+  border: none;
+  border-radius: 5px 0 0 5px;
+  padding: 20px;
+}
+.search_container img {
+  background-color: #E7E7E7;
+  width: 30px;
+  border-radius: 0 5px 5px 0;
+  padding: 13px;
+}
+
 * {
   font-family: "Lato", sans-serif;
 }/*# sourceMappingURL=style.css.map */
