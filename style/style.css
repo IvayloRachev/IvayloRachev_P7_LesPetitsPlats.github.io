@@ -31,10 +31,29 @@ header img {
 }
 
 .select_container {
-  width: 100%;
+  width: 50%;
   display: flex;
+  justify-content: flex-start;
   margin-top: 10px;
   gap: 20px;
+}
+.select_container #ingredient_select input {
+  background-color: #3282F7;
+}
+.select_container #device_select input {
+  background-color: #68D9A4;
+}
+.select_container #utensil_select input {
+  background-color: #ED6454;
+}
+.select_container #ingredient_select input, .select_container #device_select input, .select_container #utensil_select input {
+  width: -webkit-fill-available;
+  padding: 20px;
+  border: none;
+  border-radius: 5px 5px 5px 5px;
+}
+.select_container #ingredient_select input::placeholder, .select_container #device_select input::placeholder, .select_container #utensil_select input::placeholder {
+  color: white;
 }
 
 * {
