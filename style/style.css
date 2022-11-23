@@ -7,4 +7,8 @@ header {
 }
 header img {
   width: 268px;
+}
+
+* {
+  font-family: "Lato", sans-serif;
 }/*# sourceMappingURL=style.css.map */
