@@ -13,7 +13,7 @@ function recipesFactory(recipe) {
         cardTop.setAttribute('class', 'top_card_desc');
         cardTop.innerHTML = `<h2>${recipe.name}</h2>
                             <div class="card_time">
-                                <img src="../../assets/time.png alt="icône durée">
+                                <img src="../../assets/time.png" alt="icône durée">
                                 <p>${recipe.time} min</p>
                             </div>`;
         cardDesc.appendChild(cardTop);
