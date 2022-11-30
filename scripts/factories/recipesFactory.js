@@ -69,4 +69,5 @@ function recipesFactory(recipe) {
 
         return card;
     }
+    return {getRecipeCardDOM}
 }
