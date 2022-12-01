@@ -69,5 +69,13 @@ function recipesFactory(recipe) {
 
         return card;
     }
-    return {getRecipeCardDOM}
+
+    function getIngredientSelectCardDOM() {
+        const e = document.createElement('div');
+        e.setAttribute('class', 'eIngredient');
+        e.innerHTML = recipe;
+        return e;
+    }
+
+    return {getRecipeCardDOM, getIngredientSelectCardDOM}
 }
