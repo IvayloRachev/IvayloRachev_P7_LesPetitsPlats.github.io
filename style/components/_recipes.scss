@@ -1,0 +1,66 @@
+.card_container {
+    width: 86%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+}
+
+.card_img {
+    height: 180px;
+    background-color: $darkbg;
+    border-radius: 5px 5px 0 0;
+}
+
+.card_desc {
+    height: 170px;
+    background-color: $background;
+    border-radius: 0 0 5px 5px;
+    padding: 20px;
+
+    & > * {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        align-content: center;
+    }
+
+    .card_time {
+        display: flex;
+        align-items: center;
+        img {
+            margin-right: 10px;
+        }
+    }
+
+    h2, .card_time p {
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    .bottom_card_desc {
+        font-size: 12px;
+
+        & > * {
+            width: 50%;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        p {
+            width: 170px;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 6;
+            -webkit-box-orient: vertical;
+            position: absolute;
+        }
+    }
+}
+
+.products {
+    display: none;
+}
