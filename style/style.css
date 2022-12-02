@@ -45,6 +45,61 @@ header img {
   display: none;
 }
 
+.input_tags {
+  margin-top: 3%;
+}
+.input_tags .filter_tags {
+  display: flex;
+  flex-wrap: wrap;
+}
+.input_tags .tags_input {
+  margin-top: 5px;
+  display: flex;
+}
+.input_tags .margin_tags {
+  margin-right: 20px;
+}
+
+.tag {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 5px;
+  padding: 20px 15px;
+}
+.tag label {
+  display: none;
+}
+.tag .tag_text {
+  background-color: transparent;
+  border: none;
+}
+.tag .tag_text[type=text] {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: white;
+}
+.tag .tag_text::placeholder {
+  color: white;
+}
+
+.tag_text:focus {
+  outline: none;
+}
+
+.ingredient_input {
+  background-color: #3282F7;
+}
+
+.device_input {
+  background-color: #68D9A4;
+}
+
+.utensil_input {
+  background-color: #ED6454;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -55,6 +110,11 @@ html, body {
 
 html {
   background-color: white;
+}
+
+body {
+  width: 85%;
+  margin: auto;
 }
 
 img {

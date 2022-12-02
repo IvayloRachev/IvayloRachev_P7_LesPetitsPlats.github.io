@@ -1,0 +1,54 @@
+.input_tags {
+    margin-top: 3%;
+    .filter_tags {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .tags_input {
+       margin-top: 5px;
+       display: flex; 
+    }
+    .margin_tags {
+        margin-right: 20px;
+    }
+}
+
+.tag {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    padding: 20px 15px;
+    label {
+        display: none;
+    }
+    .tag_text {
+        background-color: transparent;
+        border: none;
+        &[type="text"] {
+            font-family: 'Lato', sans-serif;
+            font-weight: 400;
+            font-size: 18px;
+            color: white;
+        }
+        &::placeholder {
+            color: white;
+        }
+    }
+}
+
+.tag_text:focus {
+    outline: none;
+}
+
+.ingredient_input {
+    background-color: $ingredients;
+}
+
+.device_input {
+    background-color: $devices;
+}
+
+.utensil_input {
+    background-color: $utensils;
+}
