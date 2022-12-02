@@ -4,13 +4,13 @@
     align-items: center;
     background-color: $searchinput;
     padding: 5px 20px 5px 4px;
+    border-radius: 5px;
     label {
         display: none;
     }
     .search_text {
         background-color: transparent;
         border: none;
-        border-radius: 5px;
         padding: 20px;
         width: 90%;
         &[type="search"] {

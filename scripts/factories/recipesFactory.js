@@ -1,6 +1,6 @@
 function recipesFactory(data) {
     const {id, name, time, description} = data
-    const picture = `./assets/limonade.jpg`
+    const picture = `./assets/legumes.jpg`
 
     function getRecipeCardDOM() {
         const card = document.createElement('article');
@@ -12,13 +12,13 @@ function recipesFactory(data) {
                         <div class="recipe_title_time">
                             <h2 class="recipe_title">${name}</h2>
                             <div class="recipe_time">
-                                <img src="./assets/time.png" alt="icône horloge">
+                                <img src="./assets/time.png" class="time" alt="icône horloge">
                                 <p>${time} min</p>
                             </div>
                         </div>
                         
                         <div class="ingredients_recipe_text">
-                        <div class="ingredients_tab">`
+                            <div class="ingredients_tab">`
 
         data.ingredients.forEach(ingredient => {
             let ingredientName = `${ingredient.ingredient}`;
