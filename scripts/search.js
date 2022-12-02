@@ -27,7 +27,7 @@ function globalSearch() {
 
             let ingredients = recipes[i].ingredients;
             for (let i = 0; i < ingredients.length; i++) {
-                let ingredientsList = ingredients[i].ingredients;
+                let ingredientsList = ingredients[i].ingredient;
                 if (ingredientsList.toLowerCase().includes(searchField.toLowerCase()) && doublon == false) {
                     inputArray.push(recipes[i]);
                     doublon = true;
@@ -51,6 +51,7 @@ function globalSearch() {
 
         };
         displayRecipe(inputArray);
+        return true;
     }
 }
 
