@@ -34,3 +34,16 @@
     color: #D04F4F;
     display: none;
 }
+
+.searchBtn:hover {
+    cursor: pointer;
+}
+
+button {
+    border: none;
+    background-color: $searchinput;
+}
+
+button:active {
+    background-color: red;
+}

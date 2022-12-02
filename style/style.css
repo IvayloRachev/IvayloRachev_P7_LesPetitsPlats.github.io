@@ -45,6 +45,19 @@ header img {
   display: none;
 }
 
+.searchBtn:hover {
+  cursor: pointer;
+}
+
+button {
+  border: none;
+  background-color: #E7E7E7;
+}
+
+button:active {
+  background-color: red;
+}
+
 .input_tags {
   margin-top: 3%;
 }
