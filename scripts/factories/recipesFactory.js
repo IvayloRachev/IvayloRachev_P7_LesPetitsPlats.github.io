@@ -7,7 +7,7 @@ function recipesFactory(data) {
         card.setAttribute('class', 'recipe_card');
         card.setAttribute('id', `${id}`);
 
-        let html = `<img class="recipe__image" src="${picture}" alt="Photo de la recette>"
+        let codeHtml = `<img class="recipe__image" src="${picture}" alt="${name}">
                     <div class="recipe__infos">
                         <div class="recipe_title_time">
                             <h2 class="recipe_title">${name}</h2>
@@ -26,15 +26,15 @@ function recipesFactory(data) {
             if (quantityName === `${undefined}`) {
                 quantityName = "";
             }
-            html += `<p class="ingredient"><span class="ingredient_bold">${ingredientName}:</span> ${quantityName}</p>`;
+            codeHtml += `<p class="ingredient"><span class="ingredient_bold">${ingredientName}:</span> ${quantityName}</p>`;
         });
-        html +=         `</div>
+        codeHtml +=         `</div>
                             <p class="recipe_desc">${description}</p>
                         </div>
                     </div>`
-        card.innerHTML = html;
+        card.innerHTML = codeHtml;
 
         return(card);
     }
-    return getRecipeCardDOM
+    return {getRecipeCardDOM}
 }
