@@ -6,4 +6,41 @@ header {
 header img {
   width: 270px;
   margin: auto;
+}
+
+.input_search {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #E7E7E7;
+  padding: 5px 20px 5px 4px;
+}
+.input_search label {
+  display: none;
+}
+.input_search .search_text {
+  background-color: transparent;
+  border: none;
+  border-radius: 5px;
+  padding: 20px;
+  width: 90%;
+}
+.input_search .search_text[type=search] {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: black;
+}
+
+.search_text::placeholder {
+  opacity: 0.5;
+}
+
+.search_text:focus {
+  outline: none;
+}
+
+.search_error {
+  color: #D04F4F;
+  display: none;
 }/*# sourceMappingURL=style.css.map */
