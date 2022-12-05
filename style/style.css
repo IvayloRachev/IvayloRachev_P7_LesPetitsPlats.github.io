@@ -54,10 +54,6 @@ button {
   background-color: #E7E7E7;
 }
 
-button:active {
-  background-color: red;
-}
-
 .input_tags {
   margin-top: 3%;
 }

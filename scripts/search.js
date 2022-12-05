@@ -34,10 +34,17 @@ function globalSearch() {
         };
         displayRecipe(inputArray);
     }
-}
+};
 
-let buttonSearch = document.querySelector('button');
+const buttonSearch = document.querySelector('button');
 buttonSearch.addEventListener('click', () => {
     console.log();
     globalSearch();
+});
+
+const searchInput = document.getElementById('search');
+searchInput.addEventListener('input', function() {
+    if (searchInput.value.length > 2) {
+        globalSearch();
+    };
 });
