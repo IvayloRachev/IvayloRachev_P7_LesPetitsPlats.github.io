@@ -8,6 +8,7 @@ function displayRecipe(inputArray) {
     }else{
 
         inputArray.forEach((recipe) => {
+            document.querySelector('.search_error').style.display = "none";
             const recipeModel = recipesFactory(recipe);
             const recipeCardDOM = recipeModel.getRecipeCardDOM();
             cardsSection.appendChild(recipeCardDOM);

@@ -66,4 +66,3 @@ buttonSearch.addEventListener('keydown', (e) => {
         globalSearch();
     }
 });
-
