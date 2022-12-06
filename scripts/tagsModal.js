@@ -73,3 +73,64 @@ btnModal.forEach((btn) => {
         }
     });
 });
+//fin de open close tags modals
+
+//filter recipes
+function filterRecipes() {
+    const searchIngredientTag = document.getElementById('ingredients');
+    const searchDeviceTag = document.getElementById('devices');
+    const searchUtensilTag = document.getElementById('utensils');
+
+    searchIngredientTag.addEventListener('input', filterIngredients);
+    searchDeviceTag.addEventListener('input', filterDevices);
+    searchUtensilTag.addEventListener('input', filterUtensils);
+
+    function filterIngredients() {
+        const ingredientTagValue = searchIngredientTag.value.toLowerCase();
+        const allIngredients = document.querySelectorAll('.ingredient_tag');
+        const toDisplay = document.querySelector('.ingredients_list');
+        toDisplay.classList.remove('none');
+
+        allIngredients.forEach((ingredient) => {
+            let test = ingredient.innerHTML;
+            if (test.toLowerCase().includes(ingredientTagValue)) {
+                ingredient.style.display = '';
+            } else {
+                ingredient.style.display = 'none';
+            }
+        });
+    }
+
+    function filterDevices() {
+        const deviceTagValue = searchDeviceTag.value.toLowerCase();
+        const allDevices = document.querySelectorAll('.device_tag');
+        const toDisplay = document.querySelector('.devices_list');
+        toDisplay.classList.remove('none');
+
+        allDevices.forEach((device) => {
+            let test = device.innerHTML;
+            if (test.toLowerCase().includes(deviceTagValue)) {
+                device.style.display = '';
+            } else {
+                device.style.display = 'none';
+            }
+        });
+    }
+
+    function filterUtensils() {
+        const utensilTagValue = searchUtensilTag.value.toLowerCase();
+        const allUtensils = document.querySelectorAll('.utensil_tag');
+        const toDisplay = document.querySelector('.utensils_list');
+        toDisplay.classList.remove('none');
+
+        allUtensils.forEach((utensil) => {
+            let test = utensil.innerHTML;
+            if (test.toLowerCase().includes(utensilTagValue)) {
+                utensil.style.display = '';
+            } else {
+                utensil.style.display = 'none';
+            }
+        });
+    }
+}
+filterRecipes();
