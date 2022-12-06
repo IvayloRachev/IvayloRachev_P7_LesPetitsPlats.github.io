@@ -133,4 +133,5 @@ function filterRecipes() {
         });
     }
 }
+//fin de filter recipes
 filterRecipes();
