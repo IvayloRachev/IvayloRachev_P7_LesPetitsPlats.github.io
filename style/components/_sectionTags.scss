@@ -41,14 +41,61 @@
     outline: none;
 }
 
-.ingredient_input {
+.ingredient_input, .ingredients_list, .tags[categorie=ingredient] {
     background-color: $ingredients;
 }
 
-.device_input {
+.device_input, .devices_list, .tags[categorie=appliance] {
     background-color: $devices;
 }
 
-.utensil_input {
+.utensil_input, .utensils_list, .tags[categorie=utensil] {
     background-color: $utensils;
+}
+
+.none {
+    display: none;
+}
+
+.ingredients_list, .devices_list, .utensils_list {
+    width: 450px;
+    border-radius: 0 0 5px 5px;
+    .tag_list {
+        padding: 0 10px;
+        margin-top: -3px;
+        display: flex;
+        flex-wrap: wrap;
+        max-height: 220px;
+        max-width: 700px;
+        overflow: auto;
+        list-style: none;
+        color: white;
+        line-height: 1.8em;
+    }
+    li {
+        width: 130px;
+        height: 30px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        padding-left: 8px;
+        cursor: pointer;
+    }
+    li:hover {
+        border-radius: 5px;
+        background-color: rgba(245, 245, 245, 0.2);
+    }
+}
+
+.tag_list::-webkit-scrollbar {
+    border-radius: 5px;
+    padding-right: 5px;
+    width: 10px;
+    background-color: rgba(0, 0, 0, 0.2);
+    
+}
+
+.tag_list::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
 }

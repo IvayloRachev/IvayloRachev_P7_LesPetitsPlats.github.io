@@ -14,12 +14,12 @@ function tagLists(listRecipes) {
             ingredientsArray.push(`<li class="ingredient_tag el" categorie="ingredient">${ingredientsTab.toLowerCase()}</li>`);
         });
 
-        const devices = recipe.appliance;
-        devicesArray.push(`<li class="device_tag el" categorie="appliance">${devices.toLowerCase()}</li>`);
+        const devicesTab = recipe.appliance;
+        devicesArray.push(`<li class="device_tag el" categorie="appliance">${devicesTab.toLowerCase()}</li>`);
 
-        const utensils = recipe.utensils;
-        utensils.forEach((utensil) => {
-            utensilsArray.push(`<li class="utensil_tag el" categorie="utensil">${utensil.toLowerCase()}</li>`);
+        const utensils = recipe.ustensils;
+        utensils.forEach((ustensil) => {
+            utensilsArray.push(`<li class="utensil_tag el" categorie="utensil">${ustensil.toLowerCase()}</li>`);
         });
     });
 
