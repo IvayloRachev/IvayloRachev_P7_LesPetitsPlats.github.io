@@ -48,7 +48,7 @@ btnModal.forEach((btn) => {
                 modalbg.classList.add('none');
                 ingredientPlaceHolder[0].placeholder = "Ingrédients";
             }
-        } else if (e.target.classList.contains('down_utensils')) {
+        } else if (e.target.classList.contains('down_devices')) {
             const modalbg = document.querySelector('.devices_list');
             const devicePlaceHolder = document.getElementsByName('devices');
             devicePlaceHolder[0].placeholder = "Rechercher un appareil";
