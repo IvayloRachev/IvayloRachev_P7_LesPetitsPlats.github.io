@@ -14,8 +14,8 @@ function tagLists(listRecipes) {
             ingredientsArray.push(`<li class="ingredient_tag el" categorie="ingredient">${ingredientsTab.toLowerCase()}</li>`);
         });
 
-        const devicesTab = recipe.appliance;
-        devicesArray.push(`<li class="device_tag el" categorie="appliance">${devicesTab.toLowerCase()}</li>`);
+        const devices = recipe.appliance;
+        devicesArray.push(`<li class="device_tag el" categorie="appliance">${devices.toLowerCase()}</li>`);
 
         const utensils = recipe.ustensils;
         utensils.forEach((ustensil) => {
