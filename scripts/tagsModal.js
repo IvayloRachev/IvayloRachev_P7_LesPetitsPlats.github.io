@@ -38,36 +38,36 @@ const btnModal = document.querySelectorAll('.down_button');
 btnModal.forEach((btn) => {
     btn.addEventListener('click', (e) => {
         if (e.target.classList.contains('down_ingredients')) {
-            const modalIng = document.querySelector('.ingredients_list');
+            const modalbg = document.querySelector('.ingredients_list');
             const ingredientPlaceHolder = document.getElementsByName('ingredients');
             ingredientPlaceHolder[0].placeholder = "Rechercher un ingrédient";
 
-            if (modalIng.classList.contains('none')) {
-                modalIng.classList.remove('none');
+            if (modalbg.classList.contains('none')) {
+                modalbg.classList.remove('none');
             } else {
-                modalIng.classList.add('none');
+                modalbg.classList.add('none');
                 ingredientPlaceHolder[0].placeholder = "Ingrédients";
             }
         } else if (e.target.classList.contains('down_utensils')) {
-            const modalDev = document.querySelector('.devices_list');
+            const modalbg = document.querySelector('.devices_list');
             const devicePlaceHolder = document.getElementsByName('devices');
             devicePlaceHolder[0].placeholder = "Rechercher un appareil";
 
-            if (modalDev.classList.contains('none')) {
-                modalDev.classList.remove('none');
+            if (modalbg.classList.contains('none')) {
+                modalbg.classList.remove('none');
             } else {
-                modalDev.classList.add('none');
+                modalbg.classList.add('none');
                 ingredientPlaceHolder[0].placeholder = "Appareils"; 
             }
         } else if (e.target.classList.contains('down_utensils')) {
-            const modalUt = document.querySelector('.utensils_list');
+            const modalbg = document.querySelector('.utensils_list');
             const utensilPlaceHolder = document.getElementsByName('utensils');
             utensilPlaceHolder[0].placeholder = "Rechercher un ustensile";
 
-            if (modalUt.classList.contains('none')) {
-                modalUt.classList.remove('none');
+            if (modalbg.classList.contains('none')) {
+                modalbg.classList.remove('none');
             } else {
-                modalUt.classList.add('none');
+                modalbg.classList.add('none');
                 utensilPlaceHolder[0].placeholder = "Ustensiles";
             }
         }

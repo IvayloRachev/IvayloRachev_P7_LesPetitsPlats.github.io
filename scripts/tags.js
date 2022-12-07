@@ -16,12 +16,12 @@ function createTag(el) {
         tag.setAttribute('categorie', 'ingredient');
         tag.style.background = "#3282F7";
 
-        const modalIng = document.querySelector('.ingredients_list');
+        const modalbg = document.querySelector('.ingredients_list');
         const placeHolderIngredient = document.getElementsByName('Ingrédients');
-        if (modalIng.classList.contains('none')) {
-            modalIng.classList.remove('none');
+        if (modalbg.classList.contains('none')) {
+            modalbg.classList.remove('none');
         } else {
-            modalIng.classList.add('none');
+            modalbg.classList.add('none');
             placeHolderIngredient[0].placeholder = "Ingrédients";
         }
     }
@@ -29,12 +29,12 @@ function createTag(el) {
         tag.setAttribute('categorie', 'appliance');
         tag.style.background = "#68D9A4";
 
-        const modalDev = document.querySelector('.devices_list');
+        const modalbg = document.querySelector('.devices_list');
         const placeHolderDevice = document.getElementsByName('devices');
-        if (modalDev.classList.contains('none')) {
-            modalDev.classList.remove('none');
+        if (modalbg.classList.contains('none')) {
+            modalbg.classList.remove('none');
         } else {
-            modalDev.classList.add('none');
+            modalbg.classList.add('none');
             placeHolderDevice[0].placeholder = "Appareils";
         }
     }
@@ -42,12 +42,12 @@ function createTag(el) {
         tag.setAttribute('categorie', 'utensil');
         tag.style.background = "#ED6454";
 
-        const modalUt = document.querySelector('.utensils_list');
+        const modalbg = document.querySelector('.utensils_list');
         const placeHolderUtensil = document.getElementsByName('utensils');
-        if (modalUt.classList.contains('none')) {
-            modalUt.classList.remove('none');
+        if (modalbg.classList.contains('none')) {
+            modalbg.classList.remove('none');
         } else {
-            modalUt.classList.add('none');
+            modalbg.classList.add('none');
             placeHolderUtensil[0].placeholder = "Ustensiles";
         }
     }
