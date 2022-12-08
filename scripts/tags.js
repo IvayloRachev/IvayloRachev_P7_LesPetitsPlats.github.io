@@ -161,7 +161,7 @@ elementsOfTags.forEach((element) => {
         const close = document.querySelectorAll('.close_tag');
         close.forEach((btn) => {
             btn.addEventListener('click', (e) => {
-                e.style.display = "block";
+                element.style.display = "block";
                 e.target.closest('div').remove();
 
                 inputRecipeaArray = [];
