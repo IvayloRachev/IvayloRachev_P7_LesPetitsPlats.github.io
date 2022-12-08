@@ -11,15 +11,15 @@ function tagLists(listRecipes) {
         const ingredients = recipe.ingredients;
         ingredients.forEach((ingredient) => {
             let ingredientsTab = ingredient.ingredient;
-            ingredientsArray.push(`<li class="ingredient_tag el" categorie="ingredient">${ingredientsTab.toLowerCase()}</li>`);
+            ingredientsArray.push(`<li class="ingredient_tag element" categorie="ingredient">${ingredientsTab.toLowerCase()}</li>`);
         });
 
         const devices = recipe.appliance;
-        devicesArray.push(`<li class="device_tag el" categorie="appliance">${devices.toLowerCase()}</li>`);
+        devicesArray.push(`<li class="device_tag element" categorie="appliance">${devices.toLowerCase()}</li>`);
 
         const utensils = recipe.ustensils;
         utensils.forEach((ustensil) => {
-            utensilsArray.push(`<li class="utensil_tag el" categorie="utensil">${ustensil.toLowerCase()}</li>`);
+            utensilsArray.push(`<li class="utensil_tag element" categorie="utensil">${ustensil.toLowerCase()}</li>`);
         });
     });
 
@@ -29,7 +29,7 @@ function tagLists(listRecipes) {
     devicesList.innerHTML += `<ul class="tag_list">${newDevicesList.join('')}</ul>`;
     let newUtensilsList = [... new Set(utensilsArray)];
     utensilsList.innerHTML += `<ul class="tag_list">${newUtensilsList.join('')}</ul>`;
-};
+}
 tagLists(recipes);
 //fin de tags array
 

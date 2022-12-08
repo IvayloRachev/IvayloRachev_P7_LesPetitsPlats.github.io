@@ -1,23 +1,23 @@
 //create and delete tags
 const filterTags = document.querySelector('.filter_tags');
-const elementsOfTags = document.querySelectorAll('.el');
+const elementsOfTags = document.querySelectorAll('.element');
 
-function createTag(el) {
+function createTag(element) {
     const tag = document.createElement('div');
     tag.setAttribute('class', 'tags');
-    let tagHtml = `<p>${el.innerHTML}</p>
+    let tagHtml = `<p>${element.innerHTML}</p>
                    <img src="./assets/close.png" class="close_tag" alt="Fermer le tag">`;
     tag.innerHTML = tagHtml;
     filterTags.appendChild(tag);
 
-    el.style.display = 'none';
+    element.style.display = 'none';
 
-    if (el.getAttribute('categorie') == "ingredient") {
+    if (element.getAttribute('categorie') == "ingredient") {
         tag.setAttribute('categorie', 'ingredient');
         tag.style.background = "#3282F7";
 
         const modalbg = document.querySelector('.ingredients_list');
-        const placeHolderIngredient = document.getElementsByName('Ingrédients');
+        const placeHolderIngredient = document.getElementsByName('ingredients');
         if (modalbg.classList.contains('none')) {
             modalbg.classList.remove('none');
         } else {
@@ -25,7 +25,7 @@ function createTag(el) {
             placeHolderIngredient[0].placeholder = "Ingrédients";
         }
     }
-    if (el.getAttribute('categorie') == "appliance") {
+    if (element.getAttribute('categorie') == "appliance") {
         tag.setAttribute('categorie', 'appliance');
         tag.style.background = "#68D9A4";
 
@@ -38,7 +38,7 @@ function createTag(el) {
             placeHolderDevice[0].placeholder = "Appareils";
         }
     }
-    if (el.getAttribute('categorie') == "utensil") {
+    if (element.getAttribute('categorie') == "utensil") {
         tag.setAttribute('categorie', 'utensil');
         tag.style.background = "#ED6454";
 
@@ -61,11 +61,11 @@ const allUtensils = document.querySelectorAll('.utensil_tag');
 // fin de take elements
 
 //to display recipes
-elementsOfTags.forEach((el) => {
-    el.addEventListener('click', () => {
+elementsOfTags.forEach((element) => {
+    element.addEventListener('click', () => {
         document.querySelector('.search_error').style.display = "none";
-        let inputRecipaArray = [];
-        createTag(el);
+        let inputRecipeaArray = [];
+        createTag(element);
 
         function displayRecipeFilter() {
             document.getElementById('search').value = "";
@@ -90,7 +90,7 @@ elementsOfTags.forEach((el) => {
                         if (tag.getAttribute('categorie') == 'appliance') {
                             let appliances = recipe.appliance;
                             if (!tag.innerText.toLowerCase().includes(appliances.toLowerCase())) {
-                                tagOnRecipe = true;
+                                tagOnRecipe = false;
                             }
                         }
 
@@ -107,7 +107,7 @@ elementsOfTags.forEach((el) => {
                 })
 
                 if (tagOnRecipe == true) {
-                    inputRecipaArray.push(recipe);
+                    inputRecipeaArray.push(recipe);
                     console.log(recipe);
                 }
             })
@@ -118,7 +118,7 @@ elementsOfTags.forEach((el) => {
         function filterElements() {
             allIngredients.forEach((ingredientOnList) => {
                 ingredientOnList.style.display = "none";
-                inputRecipaArray.forEach((remainRecipes) => {
+                inputRecipeaArray.forEach((remainRecipes) => {
                     let ingredients = remainRecipes.ingredients;
                     ingredients.forEach((ingredient) => {
                         let tagOnRecipe = ingredient.ingredient;
@@ -131,7 +131,7 @@ elementsOfTags.forEach((el) => {
 
             allDevices.forEach((applianceOnList) => {
                 applianceOnList.style.display = "none";
-                inputRecipaArray.forEach((remainRecipes) => {
+                inputRecipeaArray.forEach((remainRecipes) => {
                     let appliances = remainRecipes.appliance;
                     if (appliances.toLowerCase().includes(applianceOnList.innerText.toLowerCase())) {
                         applianceOnList.style.display = "block";
@@ -141,7 +141,7 @@ elementsOfTags.forEach((el) => {
 
             allUtensils.forEach((ustensilOnList) => {
                 ustensilOnList.style.display = "none";
-                inputRecipaArray.forEach((remainRecipes) => {
+                inputRecipeaArray.forEach((remainRecipes) => {
                     let ustensils = remainRecipes.ustensils;
                     ustensils.forEach((ustensil) => {
                         if (ustensil.toLowerCase().includes(ustensilOnList.innerText.toLowerCase())) {
@@ -156,10 +156,10 @@ elementsOfTags.forEach((el) => {
         const close = document.querySelectorAll('.close_tag');
         close.forEach((btn) => {
             btn.addEventListener('click', (e) => {
-                el.style.display = "block";
+                e.style.display = "block";
                 e.target.closest('div').remove();
 
-                inputRecipaArray = [];
+                inputRecipeaArray = [];
                 displayRecipeFilter();
                 filterElements();
             })
