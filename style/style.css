@@ -155,6 +155,16 @@ button {
   border-radius: 5px;
 }
 
+.down_button {
+  width: 16px;
+  height: 11px;
+  transform: rotate(180deg);
+}
+
+.tags {
+  color: white;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -266,4 +276,51 @@ p, li {
 }
 .ingredient .ingredient_bold {
   font-weight: 600;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+html {
+  background-color: white;
+  margin: 0 7%;
+}
+
+h1 {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  color: #D04F4F;
+}
+
+h2 {
+  font-family: "Lato", sans-serif;
+  font-size: 18px;
+}
+
+h3 {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+h4 {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+p, li {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
 }/*# sourceMappingURL=style.css.map */
