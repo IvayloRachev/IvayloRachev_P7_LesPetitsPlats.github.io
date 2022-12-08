@@ -67,6 +67,7 @@ elementsOfTags.forEach((element) => {
         let inputRecipeaArray = [];
         createTag(element);
 
+        //to display recipes with tags
         function displayRecipeFilter() {
             document.getElementById('search').value = "";
 
@@ -114,7 +115,9 @@ elementsOfTags.forEach((element) => {
             displayRecipe(inputRecipeaArray);
         }
         displayRecipeFilter();
+        //fin de to display recipes with tags
 
+        //filter elements in inputs
         function filterElements() {
             allIngredients.forEach((ingredientOnList) => {
                 ingredientOnList.style.display = "none";
@@ -152,7 +155,9 @@ elementsOfTags.forEach((element) => {
             })
         }
         filterElements();
+        //fin de filter elements in inputs
 
+        //close tags
         const close = document.querySelectorAll('.close_tag');
         close.forEach((btn) => {
             btn.addEventListener('click', (e) => {
@@ -164,5 +169,7 @@ elementsOfTags.forEach((element) => {
                 filterElements();
             })
         })
+        //fin de close tags
     })
 })
+//fin de to display recipes
