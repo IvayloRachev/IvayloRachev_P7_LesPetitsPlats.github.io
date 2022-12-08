@@ -98,7 +98,7 @@ function filterRecipes() {
             } else {
                 ingredient.style.display = 'none';
             }
-        });
+        })
     }
 
     function filterDevices() {
@@ -114,7 +114,7 @@ function filterRecipes() {
             } else {
                 device.style.display = 'none';
             }
-        });
+        })
     }
 
     function filterUtensils() {
@@ -130,8 +130,8 @@ function filterRecipes() {
             } else {
                 utensil.style.display = 'none';
             }
-        });
+        })
     }
 }
 //fin de filter recipes
-filterRecipes();
+filterRecipes()

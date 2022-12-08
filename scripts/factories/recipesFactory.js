@@ -7,7 +7,7 @@ function recipesFactory(data) {
         card.setAttribute('class', 'recipe_card');
         card.setAttribute('id', `${id}`);
 
-        let codeHtml = `<img class="recipe__image" src="${picture}" alt="${name}">
+        let codeHtml = `<img class="recipe_card__image" src="${picture}" alt="${name}">
                     <div class="recipe__infos">
                         <div class="recipe_title_time">
                             <h2 class="recipe_title">${name}</h2>

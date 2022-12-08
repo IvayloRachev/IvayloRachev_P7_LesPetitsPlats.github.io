@@ -4,7 +4,7 @@ const elementsOfTags = document.querySelectorAll('.element');
 
 function createTag(element) {
     const tag = document.createElement('div');
-    tag.setAttribute('class', 'tags');
+    tag.classList.add('tags');
     let tagHtml = `<p>${element.innerHTML}</p>
                    <img src="./assets/close.png" class="close_tag" alt="Fermer le tag">`;
     tag.innerHTML = tagHtml;
@@ -80,7 +80,7 @@ elementsOfTags.forEach((element) => {
                             let ingredients = recipe.ingredients;
                             tagOnRecipe = false;
                             ingredients.forEach((ingredient) => {
-                                let ingredientsTabList = ingredient.ingredient;
+                                let ingredientsTabList = ingredient.ingredient.toString();
                                 if (ingredientsTabList.toLowercase() == (tag.innerText.toLowerCase())) {
                                     tagOnRecipe = true;
                                 }
@@ -111,7 +111,7 @@ elementsOfTags.forEach((element) => {
                     console.log(recipe);
                 }
             })
-            displayRecipe(inputArray);
+            displayRecipe(recipes);
         }
         displayRecipeFilter();
 
