@@ -1,3 +1,4 @@
+//global search
 function globalSearch() {
     const inputArray = [];
     let searchField = document.getElementById('search').value;
@@ -48,3 +49,4 @@ searchInput.addEventListener('input', function() {
         globalSearch();
     };
 });
+//fin de global search
