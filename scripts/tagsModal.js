@@ -1,4 +1,4 @@
-//tags arrays
+//create arrays for modals
 function tagLists(listRecipes) {
     let ingredientsList = document.querySelector('.ingredients_list');
     const ingredientsArray = [];
@@ -6,7 +6,9 @@ function tagLists(listRecipes) {
     const devicesArray = [];
     let utensilsList = document.querySelector('.utensils_list');
     const utensilsArray = [];
+//fin de create arrays for modals
 
+    //search elements and add in arrays
     listRecipes.forEach((recipe) => {
         const ingredients = recipe.ingredients;
         ingredients.forEach((ingredient) => {
@@ -22,16 +24,19 @@ function tagLists(listRecipes) {
             utensilsArray.push(`<li class="utensil_tag element" categorie="utensil">${ustensil.toLowerCase()}</li>`);
         });
     });
+    //fin de search elements and add in arrays
 
+    //to display the arrays
     let newIngredientsList = [... new Set(ingredientsArray)];
     ingredientsList.innerHTML += `<ul class="tag_list">${newIngredientsList.join('')}</ul>`;
     let newDevicesList = [... new Set(devicesArray)];
     devicesList.innerHTML += `<ul class="tag_list">${newDevicesList.join('')}</ul>`;
     let newUtensilsList = [... new Set(utensilsArray)];
     utensilsList.innerHTML += `<ul class="tag_list">${newUtensilsList.join('')}</ul>`;
+    //fin de to display the arrays
 }
 tagLists(recipes);
-//fin de tags array
+//fin de create arrays for modals
 
 //open close tags modals
 const btnModal = document.querySelectorAll('.down_button');
