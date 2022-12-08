@@ -5,7 +5,7 @@ const elementsOfTags = document.querySelectorAll('.element');
 function createTag(element) {
     const tag = document.createElement('div');
     tag.classList.add('tags');
-    let tagHtml = `<p>${element.innerHTML}</p>
+    let tagHtml = `<p>${element.innerText}</p>
                    <img src="./assets/close.png" class="close_tag" alt="Fermer le tag">`;
     tag.innerHTML = tagHtml;
     filterTags.appendChild(tag);
@@ -111,7 +111,7 @@ elementsOfTags.forEach((element) => {
                     console.log(recipe);
                 }
             })
-            displayRecipe(recipes);
+            displayRecipe(inputRecipeaArray);
         }
         displayRecipeFilter();
 
