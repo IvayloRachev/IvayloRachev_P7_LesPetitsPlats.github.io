@@ -57,7 +57,7 @@ btnModal.forEach((btn) => {
                 modalbg.classList.remove('none');
             } else {
                 modalbg.classList.add('none');
-                ingredientPlaceHolder[0].placeholder = "Appareils"; 
+                devicePlaceHolder[0].placeholder = "Appareils"; 
             }
         } else if (e.target.classList.contains('down_utensils')) {
             const modalbg = document.querySelector('.utensils_list');

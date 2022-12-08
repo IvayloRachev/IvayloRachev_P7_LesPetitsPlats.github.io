@@ -80,7 +80,7 @@ elementsOfTags.forEach((element) => {
                             let ingredients = recipe.ingredients;
                             tagOnRecipe = false;
                             ingredients.forEach((ingredient) => {
-                                let ingredientsTabList = ingredient.ingredient.toString();
+                                let ingredientsTabList = ingredient.ingredient;
                                 if (ingredientsTabList.toLowercase() == (tag.innerText.toLowerCase())) {
                                     tagOnRecipe = true;
                                 }
