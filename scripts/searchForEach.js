@@ -9,30 +9,30 @@ function globalSearch() {
     }else {
         document.querySelector('.search_error').style.display = "none";
 
-        for (let i = 0; i < recipes.length; i++) {
+        recipes.forEach((recipe) => {
             let displaySort = false;
 
-            let names = recipes[i].name;
+            let names = recipe.name;
             if (names.toLowerCase().includes(searchField.toLowerCase()) && displaySort == false) {
-                inputArray.push(recipes[i]);
+                inputArray.push(recipe);
                 displaySort = true;
             }
 
-            let ingredients = recipes[i].ingredients;
-            for (let i = 0; i < ingredients.length; i++) {
-                let ingredientsList = ingredients[i].ingredient;
+            let ingredients = recipe.ingredients;
+            ingredients.forEach((ingredient) => {
+                let ingredientsList = ingredient.ingredient;
                 if (ingredientsList.toLowerCase().includes(searchField.toLowerCase()) && displaySort == false) {
-                    inputArray.push(recipes[i]);
+                    inputArray.push(recipe);
                     displaySort = true;
                 }
-            }
+            })
 
-            let description = recipes[i].description;
+            let description = recipe.description;
             if (description.toLowerCase().includes(searchField.toLowerCase()) && displaySort == false) {
-                inputArray.push(recipes[i]);
+                inputArray.push(recipe);
                 displaySort = true;
             }
-        };
+        });
         displayRecipe(inputArray);
     }
 };
