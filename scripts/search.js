@@ -1,3 +1,4 @@
+//global search
 function globalSearch() {
     const inputArray = [];
     let searchField = document.getElementById('search').value;
@@ -31,10 +32,10 @@ function globalSearch() {
                 inputArray.push(recipes[i]);
                 displaySort = true;
             }
-        };
+        }
         displayRecipe(inputArray);
     }
-};
+}
 
 const buttonSearch = document.querySelector('button');
 buttonSearch.addEventListener('click', () => {
@@ -46,5 +47,6 @@ const searchInput = document.getElementById('search');
 searchInput.addEventListener('input', function() {
     if (searchInput.value.length > 2) {
         globalSearch();
-    };
+    }
 });
+//fin de global search

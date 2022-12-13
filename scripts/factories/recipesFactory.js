@@ -1,6 +1,6 @@
 function recipesFactory(data) {
-    const {id, name, time, description} = data
-    const picture = `./assets/legumes.jpg`
+    const {id, name, time, description} = data;
+    const picture = `./assets/legumes.jpg`;
 
     function getRecipeCardDOM() {
         const card = document.createElement('article');
@@ -18,7 +18,7 @@ function recipesFactory(data) {
                         </div>
                         
                         <div class="ingredients_recipe_text">
-                            <div class="ingredients_tab">`
+                            <div class="ingredients_tab">`;
 
         data.ingredients.forEach(ingredient => {
             let ingredientName = `${ingredient.ingredient}`;
@@ -31,10 +31,10 @@ function recipesFactory(data) {
         codeHtml +=         `</div>
                             <p class="recipe_desc">${description}</p>
                         </div>
-                    </div>`
+                    </div>`;
         card.innerHTML = codeHtml;
 
         return(card);
     }
-    return {getRecipeCardDOM}
+    return {getRecipeCardDOM};
 }
