@@ -85,7 +85,7 @@ elementsOfTags.forEach((element) => {
                                 if (ingredientsTabList.toLowerCase() == (tag.innerText.toLowerCase())) {
                                     tagOnRecipe = true;
                                 }
-                            })
+                            });
                         }
 
                         if (tag.getAttribute('categorie') == 'appliance') {
@@ -102,16 +102,16 @@ elementsOfTags.forEach((element) => {
                                 if (ustensil.toLowerCase() == (tag.innerText.toLowerCase())) {
                                     tagOnRecipe = true;
                                 }
-                            })
+                            });
                         }
                     }
-                })
+                });
 
                 if (tagOnRecipe == true) {
                     inputRecipeaArray.push(recipe);
                     console.log(recipe);
                 }
-            })
+            });
             displayRecipe(inputRecipeaArray);
         }
         displayRecipeFilter();
@@ -128,9 +128,9 @@ elementsOfTags.forEach((element) => {
                         if (tagOnRecipe.toLowerCase().includes(ingredientOnList.innerText.toLowerCase())) {
                             ingredientOnList.style.display = "block";
                         }
-                    })
-                })
-            })
+                    });
+                });
+            });
 
             allDevices.forEach((applianceOnList) => {
                 applianceOnList.style.display = "none";
@@ -139,8 +139,8 @@ elementsOfTags.forEach((element) => {
                     if (appliances.toLowerCase().includes(applianceOnList.innerText.toLowerCase())) {
                         applianceOnList.style.display = "block";
                     }
-                })
-            })
+                });
+            });
 
             allUtensils.forEach((ustensilOnList) => {
                 ustensilOnList.style.display = "none";
@@ -150,9 +150,9 @@ elementsOfTags.forEach((element) => {
                         if (ustensil.toLowerCase().includes(ustensilOnList.innerText.toLowerCase())) {
                             ustensilOnList.style.display = "block";
                         }
-                    })
-                })
-            })
+                    });
+                });
+            });
         }
         filterElements();
         //fin de filter elements in inputs
@@ -167,9 +167,9 @@ elementsOfTags.forEach((element) => {
                 inputRecipeaArray = [];
                 displayRecipeFilter();
                 filterElements();
-            })
-        })
+            });
+        });
         //fin de close tags
-    })
-})
+    });
+});
 //fin de to display recipes
