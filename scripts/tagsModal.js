@@ -6,7 +6,7 @@ function tagLists(listRecipes) {
     const devicesArray = [];
     let utensilsList = document.querySelector('.utensils_list');
     const utensilsArray = [];
-//fin de create arrays for modals
+
 
     //search elements and add in arrays
     listRecipes.forEach((recipe) => {
