@@ -47,12 +47,7 @@ const searchInput = document.getElementById('search');
 searchInput.addEventListener('input', function() {
     if (searchInput.value.length > 2) {
         globalSearch();
-    }
-});
-
-const refresh = document.getElementById('search');
-refresh.addEventListener('input', function() {
-    if (refresh.value.length <= 2) {
+    }else {
         displayRecipe(recipes);
         document.querySelector('.search_error').style.display = "block";
     }
