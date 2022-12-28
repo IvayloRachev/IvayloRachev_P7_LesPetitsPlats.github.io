@@ -49,4 +49,12 @@ searchInput.addEventListener('input', function() {
         globalSearch();
     }
 });
+
+const refresh = document.getElementById('search');
+refresh.addEventListener('input', function() {
+    if (searchInput.value.length <= 2) {
+        displayRecipe(recipes);
+        document.querySelector('.search_error').style.display = "block";
+    }
+});
 //fin de global search
