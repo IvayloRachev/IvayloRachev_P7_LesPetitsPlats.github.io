@@ -32,7 +32,8 @@ function globalSearch() {
                 displaySort = true;
             }
         });
-        displayRecipe(inputArray);
+        let inputUniqueArray = [...new Set(inputArray)];
+        displayRecipe(inputUniqueArray);
     }
 }
 
