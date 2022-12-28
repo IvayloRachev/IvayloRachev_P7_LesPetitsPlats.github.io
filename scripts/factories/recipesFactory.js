@@ -1,6 +1,6 @@
 function recipesFactory(data) {
     const {id, name, time, description} = data;
-    const picture = `./assets/legumes.jpg`;
+    const picture = `./assets/legumes.jpg`; 
 
     function getRecipeCardDOM() {
         const card = document.createElement('article');
