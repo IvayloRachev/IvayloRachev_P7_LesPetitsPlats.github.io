@@ -5,7 +5,6 @@ function globalSearch() {
 
     if (searchField.length < 3) {
         document.querySelector('.search_error').style.display = "block";
-        displayRecipe(recipes);
     }else {
         document.querySelector('.search_error').style.display = "none";
 
