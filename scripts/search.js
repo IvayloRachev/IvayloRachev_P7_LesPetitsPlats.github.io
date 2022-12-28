@@ -52,7 +52,7 @@ searchInput.addEventListener('input', function() {
 
 const refresh = document.getElementById('search');
 refresh.addEventListener('input', function() {
-    if (searchInput.value.length <= 2) {
+    if (refresh.value.length <= 2) {
         displayRecipe(recipes);
         document.querySelector('.search_error').style.display = "block";
     }
